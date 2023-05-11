@@ -32,7 +32,8 @@ class PecanStreetDataset(Dataset):
 
 
 def make_train_data(config, train_data, appliance, window_length, train_buildings):
-    root_path = r"C:\Users\aar245.CORNELL\Desktop\privacy_preserving_nn\input\1min_real_"
+
+    root_path = "/home/aar245/EERL/input/1min_real_"
     train_dataset = PecanStreetDataset(str(root_path) + str(train_data) + "2019.csv", appliance, window_length,
                                              train_buildings)
 
@@ -48,7 +49,7 @@ def make_train_data(config, train_data, appliance, window_length, train_building
 
 
 def make_test_val_data(config, test_data, appliance, window_length, test_buildings):
-    root_path = r"C:\Users\aar245.CORNELL\Desktop\privacy_preserving_nn\input\1min_real_"
+    root_path = "/home/aar245/EERL/input/1min_real_"
 
     test_validation_dataset = PecanStreetDataset(str(root_path) + str(test_data) + "2019.csv", appliance, window_length,
                                                 test_buildings)
